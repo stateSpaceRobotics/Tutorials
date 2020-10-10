@@ -13,7 +13,5 @@ def main():
 	#multResult = fraction1 * fraction2
 	#print("Multiplication result was: " + multResult + ". The correct answer is: 1/4")
 
-	#divResult = fraction1 / fraction2
-	#print("Division result was: " + divResult + ". The correct answer is: 1/1")
-
-main()
+	divResult = fraction1 / fraction2
+	print("Division result was: " + divResult + ". The correct answer is: 1/1")
