@@ -9,7 +9,7 @@ class MyFraction:
 	def __add__(self, fraction):
 		self.sumNum = self.numerator + fraction.numerator
 		self.sumDen = self.gcf(self.denominator, fraction.denominator)
-		answer = self.sumNum + '/' + self.sumDen
+		answer = MyFraction(self.sumNum, self.sumDen)
 		return answer
 
 	def __sub__(self, fraction):
