@@ -4,10 +4,12 @@ class MyFraction:
 		self.denominator = denominator
 
 	def __str__(self):
-		return self.numerator + "/" + self.denominator
+		return str(self.numerator) + "/" + str(self.denominator)
 
 	def __add__(self, fraction):
-		answer = "Calculate the answer. The answer will be a fraction"
+		self.sumNum = self.numerator + fraction.numerator
+		self.sumDen = self.gcf(self.denominator, fraction.denominator)
+		answer = MyFraction(self.sumNum, self.sumDen)
 		return answer
 
 	def __sub__(self, fraction):
@@ -26,3 +28,13 @@ class MyFraction:
 		else:
 			answer = MyFraction(newNum, newDen)
 		return answer
+
+	def gcf(self, x, y):
+		if x > y:
+			smaller = y
+		else:
+			smaller = x
+		for i in range(1, smaller + 1):
+			if((x % i ==  0) and (y % i == 0)):
+				gcf = i
+		return gcf
