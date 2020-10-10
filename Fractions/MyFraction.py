@@ -19,6 +19,10 @@ class MyFraction:
 		return answer
 
 	def __truediv__(self, fraction):
-		answer = "Calculate the answer. The answer will be a fraction"
+		newNum = self.numerator * fraction.denominator
+		newDen = self.denominator * fraction.numerator
+		if (newNum == newDen):
+			answer = MyFraction(1,1)
+		else:
+			answer = MyFraction(newNum, newDen)
 		return answer
-
