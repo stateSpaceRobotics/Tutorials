@@ -8,7 +8,7 @@ class MyFraction:
 
 	def __add__(self, fraction):
 		self.sumNum = self.numerator + fraction.numerator
-		self.sumDen = gcf(self.denominator, fraction.denominator)
+		self.sumDen = self.gcf(self.denominator, fraction.denominator)
 		answer = self.sumNum + '/' + self.sumDen
 		return answer
 
@@ -24,7 +24,7 @@ class MyFraction:
 		answer = "Calculate the answer. The answer will be a fraction"
 		return answer
 
-	def __gcf__(x, y):
+	def __gcf__(self, x, y):
 		if x > y:
 			smaller = y
 		else:

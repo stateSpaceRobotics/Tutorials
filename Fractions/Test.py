@@ -1,11 +1,11 @@
 import MyFraction
 
 def main():
-	fraction1 = Fraction(1,2)
-	fraction2 = Fraction(1,2)
+	fraction1 = MyFraction(1,2)
+	fraction2 = MyFraction(1,2)
 
-	#addResult = fraction1 + fraction2
-	#print("Addition result was: " + addResult + ". The correct answer is: 1/1 or 2/2")
+	addResult = fraction1 + fraction2
+	print("Addition result was: " + addResult + ". The correct answer is: 1/1 or 2/2")
 
 	#subResult = fraction2 - fraction1
 	#print("Subtraction result was: " + subResult + ". The correct answer is: 0/0")
