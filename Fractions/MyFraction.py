@@ -17,7 +17,12 @@ class MyFraction:
 		return answer
 
 	def __mul__(self, fraction):
-		answer = "Calculate the answer. The answer will be a fraction"
+		numerator = self.numerator*fraction.numerator
+		denominator = self.denominator*fraction.denominator
+		gcd = self.gcf(numerator,denominator)
+		numerator = numerator // gcd
+		denominator = denominator // gcd
+		answer = MyFraction(numerator,denominator)
 		return answer
 
 	def __truediv__(self, fraction):
