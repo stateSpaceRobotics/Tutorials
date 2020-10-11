@@ -13,7 +13,12 @@ class MyFraction:
 		return answer
 
 	def __sub__(self, fraction):
-		answer = "Calculate the answer. The answer will be a fraction"
+		self.difNum = self.numerator*fraction.denominator - fraction.numerator*self.denominator
+		if not self.difNum:
+			self.difDen = 0
+		else:
+			self.difDen = self.denominator*fraction.denominator
+		answer = MyFraction(self.difNum, self.difDen)
 		return answer
 
 	def __mul__(self, fraction):
